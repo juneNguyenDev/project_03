@@ -16,6 +16,27 @@ body {
 }
 
 /* Common */
+.control {
+  display: flex;
+  column-gap: 18px;
+  align-items: center;
+}
+.control__btn {
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #575f66;
+}
+.control__btn:hover {
+  background-color: #2e80ce;
+  border-color: #2e80ce;
+  color: #fff;
+}
 .title {
   color: #10375c;
   font-size: 5rem;
@@ -56,7 +77,7 @@ a {
 /* Header */
 .header {
   background: var(--header-background);
-  height: auto;
+  height: 100vh;
   padding-bottom: 110px;
 }
 .header-top {
@@ -217,12 +238,16 @@ a {
   flex-direction: column;
   justify-content: space-between;
 }
-.service__items:nth-child(1) {
+.service__items {
   border-radius: 10px;
   background: #fff;
-  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.05);
-  margin-top: 35px;
+  cursor: pointer;
+  padding: 20px 20px 20px 0;
 }
+.service__items:hover {
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.05);
+}
+
 .service__items .info__title {
   font-size: 1.8rem;
   font-weight: 600;
@@ -277,6 +302,7 @@ a {
   border-color: #2e80ce;
   transform: translateY(-10px);
   transition: all ease-in-out 0.2s;
+  color: #2e80ce;
 }
 .feature__img {
   margin-top: 43px;
@@ -296,12 +322,131 @@ a {
   margin-top: 28px;
 }
 .card-link {
-  color: #575f66;
+  color: inherit;
   font-size: 1.6rem;
-  font-style: normal;
   font-weight: 300;
-  line-height: 28px; /* 175% */
+  line-height: 1.75; /* 175% */
   margin-top: 18px;
   margin-bottom: 42px;
   display: inline-block;
+}
+
+/* Section */
+.section {
+  margin-top: 170px;
+}
+.section-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.section-right {
+  margin-right: 188px;
+}
+.section-right .section-img__large {
+  width: 512px;
+  height: 370px;
+  border-radius: 6px;
+  box-shadow: 0 14px 28px 0 rgba(0, 0, 0, 0.07);
+  object-fit: cover;
+  position: relative;
+}
+.section-right .section-img__small {
+  position: absolute;
+  width: 332px;
+  height: 370px;
+  object-fit: cover;
+  border-radius: 6px;
+  z-index: 1;
+  margin-left: -238px;
+  margin-top: 121px;
+}
+
+.section-title {
+  margin-top: 82px;
+  color: #10375c;
+  font-size: 5rem;
+  font-weight: 600;
+  line-height: 60px; /* 120% */
+  letter-spacing: -1px;
+  width: 470px;
+}
+.section-desc {
+  color: #575f66;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 30px; /* 166.667% */
+  width: 468px;
+  margin-top: 18px;
+}
+.section-btn {
+  margin-top: 38px;
+  margin-bottom: 83px;
+}
+/* DT */
+.dentist {
+  margin-top: 170px;
+}
+.dentist-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dentist-title {
+  color: #10375c;
+  text-align: center;
+  font-size: 5rem;
+  letter-spacing: -1px;
+}
+.dentist-btn {
+  width: 205px;
+  color: #fff;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 400; /* 166.667% */
+  margin-top: 38px;
+}
+/* Bot */
+.dentist-bottom {
+  margin-top: 70px;
+}
+.dentist-list {
+  display: flex;
+  justify-content: space-between;
+}
+.dentist-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.dentist-item:hover {
+  transform: scale(103%);
+  transition: all ease-in-out 0.25s;
+}
+.dentist-logo {
+  border-radius: 6px;
+  width: 270px;
+  height: 318px;
+  object-fit: cover;
+}
+.dentist-name {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.75; /* 175% */
+}
+.dentist-info {
+  color: #575f66;
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 26px; /* 185.714% */
+}
+
+.team-control {
+  margin-top: 38px;
+  justify-content: center;
+}
+.control-icon__next {
+  rotate: 180deg;
 }
