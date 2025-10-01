@@ -78,17 +78,18 @@ a {
 .header {
   background: var(--header-background);
   height: 100vh;
-  padding-bottom: 110px;
+  padding: 110px 0;
 }
 .header-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  opacity: 0.9;
   width: 100%;
   background: var(--header-background);
   z-index: 999;
-  padding: 30px 135px;
+  padding: 15px 135px;
   top: 0;
   left: 0;
 }
@@ -422,7 +423,7 @@ a {
 }
 .dentist-item:hover {
   transform: scale(103%);
-  transition: all ease-in-out 0.25s;
+  transition: all ease-in-out 0.25 s;
 }
 .dentist-logo {
   border-radius: 6px;
@@ -449,4 +450,48 @@ a {
 }
 .control-icon__next {
   rotate: 180deg;
+}
+/* Banner */
+.banner {
+  padding: 170px 0;
+}
+
+.banner-wrap {
+  height: 427px;
+  display: flex;
+  background-color: #2e80ce;
+}
+.banner-image {
+  display: flex;
+  margin-left: 70px;
+  z-index: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.banner-content {
+  float: left;
+  margin: auto 0;
+  width: 50%;
+  margin-left: 160px;
+  clear: both;
+}
+.banner-title {
+  width: 489px;
+  color: #fff;
+  font-size: 5rem; /* 120% */
+  letter-spacing: -1px;
+  margin-top: 76px;
+}
+.banner-desc {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.66; /* 166.667% */
+  width: 586px;
+  margin-top: 18px;
+}
+.banner-dowload {
+  display: flex;
+  gap: 28px;
+  margin-top: 38px;
 }
